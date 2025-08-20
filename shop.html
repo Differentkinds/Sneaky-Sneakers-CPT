@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Sneaky Sneakers CPT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">Sneaky Sneakers CPT</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <button class="cart-btn" data-open-cart>
+        <span class="cart-count" data-cart-count>0</span> 🛒 Cart
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="shop-header fade-in">
+      <h1>Shop All</h1>
+      <div class="controls">
+        <input type="text" placeholder="Search shoes..." id="searchInput" />
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="sneakers">Sneakers</option>
+          <option value="boots">Boots</option>
+          <option value="sandals">Sandals</option>
+          <option value="formal">Formal</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid products" id="shop-grid">
+      <!-- Filled via JS -->
+    </div>
+  </main>
+
+  <!-- Modal & Cart reused -->
+  <div class="modal" data-modal>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close-modal aria-label="Close">✕</button>
+      <div class="modal-grid">
+        <div class="gallery">
+          <img class="gallery-main" data-gallery-main src="" alt="Product image" />
+          <div class="thumbs" data-thumbs></div>
+        </div>
+        <div class="details">
+          <h3 data-modal-title></h3>
+          <p class="price" data-modal-price></p>
+          <p class="desc" data-modal-desc></p>
+          <label>Size
+            <select data-size>
+              <option value="">Select UK size</option>
+              <option>UK3</option><option>UK4</option><option>UK5</option><option>UK6</option>
+              <option>UK7</option><option>UK8</option><option>UK9</option><option>UK10</option>
+            </select>
+          </label>
+          <button class="btn primary" data-add-modal>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart-drawer" data-cart>
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="modal-close" data-close-cart>✕</button>
+    </div>
+    <div class="cart-body" data-cart-items></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span data-cart-total>R0.00</span></div>
+      <button class="btn primary" data-checkout>Checkout on WhatsApp</button>
+    </div>
+  </aside>
+  <div class="backdrop" data-backdrop></div>
+
+  <a class="whatsapp-float" href="https://wa.me/27712345678" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+</body>
+</html>

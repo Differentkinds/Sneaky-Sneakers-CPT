@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Sneaky Sneakers CPT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">Sneaky Sneakers CPT</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html" class="active">About</a>
+      <button class="cart-btn" data-open-cart>
+        <span class="cart-count" data-cart-count>0</span> 🛒 Cart
+      </button>
+    </nav>
+  </header>
+
+  <main class="container narrow fade-in">
+    <h1>Our Story</h1>
+    <p>
+      We started SoleCity with one idea: great-looking shoes should also feel great.
+      From Cape Town to Johannesburg, our team curates comfortable, durable footwear
+      that fits your everyday grind—without breaking the bank.
+    </p>
+    <p>
+      We’re a small local team obsessed with quality and service. If you need help with sizing,
+      delivery, or anything at all, WhatsApp us anytime.
+    </p>
+
+    <section class="contact-card">
+      <h2>Contact Us</h2>
+      <ul class="contact-list">
+        <li>📍 South Africa</li>
+        <li>📱 <a href="https://wa.me/27712345678" target="_blank" rel="noopener">WhatsApp us</a></li>
+        <li>📸 <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li>🎵 <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        <li>📧 <a href="mailto:hello@solecity.co.za">hello@solecity.co.za</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" data-cart>
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="modal-close" data-close-cart>✕</button>
+    </div>
+    <div class="cart-body" data-cart-items></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span data-cart-total>R0.00</span></div>
+      <button class="btn primary" data-checkout>Checkout on WhatsApp</button>
+    </div>
+  </aside>
+  <div class="backdrop" data-backdrop></div>
+
+  <a class="whatsapp-float" href="https://wa.me/27712345678" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+</body>
+</html>

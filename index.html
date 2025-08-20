@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoleCity – Sneaky Sneakers CPT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">Sneaky Sneakers CPT </a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <button class="cart-btn" data-open-cart>
+        <span class="cart-count" data-cart-count>0</span>
+        🛒 Cart
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="headline">Step Into <span class="accent">Comfort</span> & Style</h1>
+      <p class="subhead">Sneaky Sneakers CPT its an online store based in capetown,we do offer same day cash on delivery</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="shop.html">Shop New Arrivals</a>
+        <a class="btn ghost" href="about.html">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="images\logo.jpg" alt="Sneaker" class="float-up" />
+    </div>
+  </section>
+
+  <section class="features container fade-in">
+    <h2>Featured Picks</h2>
+    <div class="grid products" id="featured-grid">
+      <!-- Filled via JS from products list -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">SoleCity</div>
+        <p>Premium footwear for every day. Follow us for drops & deals.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/p/Sneaky-Sneakers-CPT-100095356906617/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> SoleCity. All rights reserved.</p>
+  </footer>
+
+  <!-- Product Modal -->
+  <div class="modal" data-modal>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close-modal aria-label="Close">✕</button>
+      <div class="modal-grid">
+        <div class="gallery">
+          <img class="gallery-main" data-gallery-main src="" alt="Product image" />
+          <div class="thumbs" data-thumbs></div>
+        </div>
+        <div class="details">
+          <h3 data-modal-title></h3>
+          <p class="price" data-modal-price></p>
+          <p class="desc" data-modal-desc></p>
+          <label>Size
+            <select data-size>
+              <option value="">Select UK size</option>
+              <option>UK3</option><option>UK4</option><option>UK5</option><option>UK6</option>
+              <option>UK7</option><option>UK8</option><option>UK9</option><option>UK10</option>
+            </select>
+          </label>
+          <button class="btn primary" data-add-modal>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/27712345678" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" data-cart>
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="modal-close" data-close-cart>✕</button>
+    </div>
+    <div class="cart-body" data-cart-items></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span data-cart-total>R0.00</span></div>
+      <button class="btn primary" data-checkout>Checkout on WhatsApp</button>
+    </div>
+  </aside>
+  <div class="backdrop" data-backdrop></div>
+</body>
+</html>
